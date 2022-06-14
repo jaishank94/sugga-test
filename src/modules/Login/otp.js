@@ -11,6 +11,7 @@ import CountDown from 'react-native-countdown-component';
 import {useNavigation} from '@react-navigation/native';
 
 export default function otp() {
+  const [otp, setOtp] = useState("");
   const [counter, setCounter] = useState(false);
 
   const navigation = useNavigation();
@@ -48,7 +49,6 @@ export default function otp() {
             onFinish={() => setCounter(true)}
             digitStyle={{backgroundColor: 'white'}}
             digitTxtStyle={{color: 'grey'}}
-            // timeLabelStyle={{color: 'red', fontWeight: 'bold'}}
             separatorStyle={{color: '#fff'}}
             timeToShow={['S']}
             timeLabels={{s: null}}
