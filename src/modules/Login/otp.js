@@ -11,7 +11,7 @@ import CountDown from 'react-native-countdown-component';
 import {useNavigation} from '@react-navigation/native';
 
 export default function otp() {
-  const [otp, setOtp] = useState("");
+  const [otp, setOtp] = useState('');
   const [counter, setCounter] = useState(false);
 
   const navigation = useNavigation();
@@ -69,7 +69,14 @@ export default function otp() {
           </TouchableOpacity>
         </View>
         <View style={styles.btnVerifyWrapper}>
-          <TouchableOpacity style={styles.btnVerify}>
+          <TouchableOpacity
+            style={[
+              styles.btnVerify,
+              {
+                backgroundColor: `${otp.length === 6 ? '#3ede6b' : '#ccc'}`,
+              },
+            ]}
+            disabled={otp.length === 6 ? false : true}>
             <Text style={styles.textBtnVerify}>Verify</Text>
           </TouchableOpacity>
         </View>
