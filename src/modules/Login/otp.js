@@ -61,7 +61,7 @@ export default function otp() {
               style={[
                 styles.btnResend,
                 {
-                  color: `${counter ? 'black' : 'grey'}`,
+                  color: `${counter ? 'grey' : '#dedad9'}`,
                 },
               ]}>
               Resend Code
